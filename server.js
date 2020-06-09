@@ -9,13 +9,21 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-mongoose.connect("mongodb://localhost:27017/nodeapi", {
+const connectionString =
+  "mongodb+srv://dbamaster:GbVKribBHJ0K8DTX@cluster0-5kmv2.mongodb.net/nodeapi?retryWrites=true&w=majority";
+mongoose.connect(connectionString, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
 });
+
 requireDir("./src/models");
 
 // Rotas
 app.use("/api", require("./src/Routes"));
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
+});
