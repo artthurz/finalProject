@@ -8,6 +8,6 @@ cache:
   directories:
     - node_modules
 
-script:
-  - yarn test
-  - bash ./deploy.sh
+#script:
+ # - yarn test
+  #- bash ./deploy.sh
