@@ -26,4 +26,4 @@ const PeopleSchema = new mongoose.Schema({
 
 PeopleSchema.plugin(mongoosePaginate);
 
-mongoose.model("People", PeopleSchema);
+module.exports = mongoose.model("People", PeopleSchema);

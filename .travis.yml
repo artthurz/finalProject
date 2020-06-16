@@ -1,13 +1,13 @@
 language: node_js
 
 node_js:
-  - '8.10.0'
+  - "8.10.0"
 
 cache:
   yarn: true
   directories:
     - node_modules
 
-#script:
- # - yarn test
-  #- bash ./deploy.sh
+script:
+  - yarn test
+  - bash ./deploy.sh

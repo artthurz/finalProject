@@ -22,4 +22,4 @@ const ProdcutSchema = new mongoose.Schema({
 
 ProdcutSchema.plugin(mongoosePaginate);
 
-mongoose.model("Product", ProdcutSchema);
+module.exports = mongoose.model("Product", ProdcutSchema);
