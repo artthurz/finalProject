@@ -14,6 +14,6 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: "4ad1593b-0387-4a12-a5d6-02fcedc90539"
+    secure: $api_key
   app:
     master: master
