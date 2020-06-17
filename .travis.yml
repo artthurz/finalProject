@@ -14,7 +14,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: "322b8076-825f-409e-9702-d12e30c7f800"
+    secure: "4ad1593b-0387-4a12-a5d6-02fcedc90539"
   app:
     master: projeto10062020testes
     production: projeto10062020
