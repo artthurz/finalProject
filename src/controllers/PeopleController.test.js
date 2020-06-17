@@ -1,3 +1,8 @@
+const mongoose = require("mongoose");
+var mongoDB =
+  "mongodb+srv://dbaowner:dbaowner@cluster0-vw0p4.mongodb.net/testdb?retryWrites=true&w=majority";
+mongoose.connect(mongoDB);
+
 const People = require("../models/People");
 const PeopleController = require("./PeopleController");
 

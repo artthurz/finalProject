@@ -1,4 +1,4 @@
-language: node_js
+language: bonde_js
 
 node_js:
   - "10.14.2"
@@ -10,3 +10,11 @@ cache:
 
 script:
   - yarn test
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "projeto10062020"
+  app:
+    master: projeto10062020testes
+    production: projeto10062020
