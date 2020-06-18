@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const requireDir = require("require-dir");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 // Iniciando o App
 const app = express();
@@ -9,8 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-const connectionString = process.env.DATABASE_URL;
-mongoose.connect(connectionString, {
+mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true,
 });
 
