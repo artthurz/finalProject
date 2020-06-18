@@ -9,8 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 // Iniciando o DB
-const connectionString =
-  "mongodb+srv://dbamaster:GbVKribBHJ0K8DTX@cluster0-5kmv2.mongodb.net/nodeapi?retryWrites=true&w=majority";
+const connectionString = process.env.DATABASE_URL;
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
 });
