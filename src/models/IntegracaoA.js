@@ -18,4 +18,4 @@ const IntegracaoASchema = new mongoose.Schema({
 
 IntegracaoASchema.plugin(mongoosePaginate);
 
-module.exports = mongoose.model("IntegracaoA", PeopleSchema);
+module.exports = mongoose.model("IntegracaoA", IntegracaoASchema);
